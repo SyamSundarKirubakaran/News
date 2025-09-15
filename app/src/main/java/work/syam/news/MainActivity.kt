@@ -20,10 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             NewsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Announce(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -31,9 +28,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Announce(modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Switch to different Git branch to see the actual app implementation with different architectures.",
         modifier = modifier
     )
 }
@@ -42,6 +39,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     NewsTheme {
-        Greeting("Android")
+        Announce()
     }
 }
